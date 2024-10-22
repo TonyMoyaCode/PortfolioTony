@@ -47,3 +47,14 @@ window.onscroll = function(){
 document.querySelector('.fa-brands.fa-linkedin-in').addEventListener("click", function() {
     window.open("https://www.linkedin.com/in/antoniomoyadeveloper/", "_blank");
 });
+
+//Boton que descarga el pdf CV Antonio moya 
+document.getElementById('downloadCV').addEventListener('click', function() {
+    // Crear un enlace dinámico para la descarga
+    var link = document.createElement('a');
+    link.href = 'CV.JPG';  // La ruta hacia el archivo PDF
+    link.download = 'CV.JPG'; // El nombre del archivo descargado
+    link.click();
+});
+// para enviar correo por contacto 
+
