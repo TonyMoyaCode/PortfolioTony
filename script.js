@@ -39,22 +39,29 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
- //boton para link de instagram
- document.querySelector('.fa-brands.fa-instagram').addEventListener("click", function() {
-    window.open("https://www.instagram.com/tonymoyafresh/", "_blank");
+// Botón de Instagram
+document.querySelectorAll('.fa-brands.fa-instagram').forEach(function(button) {
+    button.addEventListener("click", function() {
+        window.open("https://www.instagram.com/tonymoyafresh/", "_blank");
+    });
 });
 
-document.querySelector('.fa-brands.fa-linkedin-in').addEventListener("click", function() {
-    window.open("https://www.linkedin.com/in/antoniomoyadeveloper/", "_blank");
+// Botón de LinkedIn
+document.querySelectorAll('.fa-brands.fa-linkedin-in').forEach(function(button) {
+    button.addEventListener("click", function() {
+        window.open("https://www.linkedin.com/in/antoniomoyadeveloper/", "_blank");
+    });
 });
+
+// Botón de GitHub
+document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
+    button.addEventListener("click", function() {
+        window.open("https://github.com/TonyMoyaCode", "_blank");
+    });
+});
+
 
 //Boton que descarga el pdf CV Antonio moya 
 document.getElementById('downloadCV').addEventListener('click', function() {
-    // Crear un enlace dinámico para la descarga
-    var link = document.createElement('a');
-    link.href = 'CV.JPG';  // La ruta hacia el archivo PDF
-    link.download = 'CV.JPG'; // El nombre del archivo descargado
-    link.click();
+    open("PortafolioTony/img/CV.jpg", "_blank");
 });
-// para enviar correo por contacto 
-
