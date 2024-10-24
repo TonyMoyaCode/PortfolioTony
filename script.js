@@ -1,14 +1,28 @@
 let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
+
+// Función que oculta o muestra el menú
+function mostrarOcultarMenu() {
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("responsive");
+    menuVisible = !menuVisible; // Alterna el valor de menuVisible
 }
+
+
+let lastScrollTop = 0; // Guarda la posición del scroll
+const nav = document.getElementById("nav");
+
+window.addEventListener("scroll", function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Si el usuario hace scroll hacia abajo, oculta el menú
+        nav.classList.add("hidden");
+    } else {
+        // Si el usuario hace scroll hacia arriba, muestra el menú
+        nav.classList.remove("hidden");
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Para evitar problemas en la parte superior
+});
 
 function seleccionar(){
     //oculto el menu una vez que selecciono una opcion
@@ -33,7 +47,6 @@ function efectoHabilidades(){
         habilidades[9].classList.add("proyect");
     }
 }
-
 
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
