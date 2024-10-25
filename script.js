@@ -2,7 +2,7 @@ let menuVisible = false;
 //Función que oculta o muestra el menu
 function mostrarOcultarMenu(){
     if(menuVisible){
-        document.getElementById("nav").classList ="";
+        document.getElementById("nav").classList ="responsive";
         menuVisible = false;
     }else{
         document.getElementById("nav").classList ="responsive";
@@ -14,6 +14,7 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
+
 //Funcion que aplica las animaciones de las habilidades
 function efectoHabilidades(){
     var skills = document.getElementById("skills");
@@ -61,7 +62,7 @@ document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
 
 //Boton que descarga el pdf CV Antonio moya 
 document.getElementById('downloadCV').addEventListener('click', function() {
-    open("https://github.com/TonyMoyaCode/PortafolioTony/blob/main/img/CV%20.jpg", "_blank");
+    open("https://github.com/TonyMoyaCode/PortafolioTony/blob/main/img/CV .jpg", "_blank");
 });
 
 

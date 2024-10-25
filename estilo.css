@@ -64,7 +64,6 @@ html{
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .inicio .contenido-banner{
     padding: 100px;
@@ -80,7 +79,7 @@ html{
     display: block;
     width: 65%;
     margin: auto;
-    border-radius: auto;
+    border-radius: 70px;
 }
 .inicio .contenido-banner h1{
     margin-top: 30px;
