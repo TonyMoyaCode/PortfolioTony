@@ -62,6 +62,6 @@ document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
 
 //Boton que descarga el pdf CV Antonio moya 
 document.getElementById('downloadCV').addEventListener('click', function() {
-    open("https://github.com/TonyMoyaCode/PortafolioTony/blob/main/img/CV .jpg", "_blank");
+    open("https://drive.google.com/file/d/1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5/view?usp=sharing", "_blank");
 });
 
