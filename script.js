@@ -65,4 +65,3 @@ document.getElementById('downloadCV').addEventListener('click', function() {
     open("https://github.com/TonyMoyaCode/PortafolioTony/blob/main/img/CV .jpg", "_blank");
 });
 
-
