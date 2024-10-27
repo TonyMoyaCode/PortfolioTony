@@ -59,9 +59,21 @@ document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
     });
 });
 
+ // Boton que descarga El CV 
+ 
+document.getElementById("downloadButton").addEventListener("click", function() {
+    // ID del archivo en Google Drive
+    const fileID = "1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5";  // Reemplaza con el ID correcto del archivo
 
-//Boton que descarga el pdf CV Antonio moya 
-document.getElementById('downloadCV').addEventListener('click', function() {
-    open("https://drive.google.com/file/d/1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5/view?usp=sharing", "_blank");
+    // URL de descarga directa
+    const downloadURL = `https://drive.google.com/uc?export=download&id=${fileID}`;
+
+    // Crear un enlace temporal para forzar la descarga
+    const a = document.createElement("a");
+    a.href = downloadURL;
+    a.download = "Curriculum.pdf";  // Nombre del archivo al descargarlo
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 });
-
