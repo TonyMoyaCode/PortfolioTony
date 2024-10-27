@@ -55,47 +55,26 @@ document.querySelectorAll('.fa-brands.fa-linkedin-in').forEach(function(button) 
 // Botón de GitHub
 document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
     button.addEventListener("click", function() {
-        window.open("https://github.com/TonyMoyaCode", "_blank");
+        window.open("assets/cv.pdf", "_blank");
     });
 });
 
  // Boton que descarga El CV 
 
-document.getElementById("downloadButton").addEventListener("click", function() {
-    // ID del archivo en Google Drive
-    const fileID = "drive/u/1/home/file/d/1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5/view?usp=sharing"; 
-
-    // URL de descarga directa
-    const downloadURL = `https://drive.google.com/file/d/1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5/view?usp=sharing`;
-
-    // Crear un enlace temporal para forzar la descarga
-    const a = document.createElement("a");
-    a.href = downloadURL;
-    a.download = "cv.pdf";  
-    a.style.display = "none";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+ document.getElementById("downloadCV").addEventListener("click", function() {
+    const pdfURL = "assets/CV.pdf"; 
+    window.open(pdfURL, "_blank"); // Esto abrirá el PDF en una nueva pestaña
 });
 
-//Boton de pregunta si deseo descargar archivo 
-document.getElementById("downloadButton").addEventListener("click", function() {
-    // Confirmación antes de la descarga
-    const userConfirmed = confirm("¿Estás seguro de que quieres descargar el archivo?");
+document.getElementById("downloadCV").addEventListener("click", function() {
+    const pdfURL = "assets/CV.pdf"; 
 
-    // Solo procede si el usuario confirmó
-    if (userConfirmed) {
-        // URL de descarga directa
-        const downloadURL = `https://drive.google.com/uc?export=download&id=1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5`; // Cambiado para forzar descarga
-
-        // Crear un enlace temporal para forzar la descarga
-        const a = document.createElement("a");
-        a.href = downloadURL;
-        a.download = "cv.pdf";  // Nombre del archivo al descargarlo
-        a.style.display = "none";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+    // Preguntar al usuario si desea descargar el archivo
+    if (confirm("¿Deseas descargar el archivo CV.pdf?")) {
+        // Si el usuario acepta, abre el PDF en una nueva pestaña
+        window.open(pdfURL, "_blank");
+    } else {
+        // Si el usuario cancela, puedes manejarlo aquí (opcional)
+        console.log("Descarga cancelada");
     }
 });
-
