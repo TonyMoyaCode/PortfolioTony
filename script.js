@@ -60,20 +60,42 @@ document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
 });
 
  // Boton que descarga El CV 
- 
+
 document.getElementById("downloadButton").addEventListener("click", function() {
     // ID del archivo en Google Drive
-    const fileID = "1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5";  // Reemplaza con el ID correcto del archivo
+    const fileID = "drive/u/1/home/file/d/1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5/view?usp=sharing"; 
 
     // URL de descarga directa
-    const downloadURL = `https://drive.google.com/uc?export=download&id=${fileID}`;
+    const downloadURL = `https://drive.google.com/file/d/1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5/view?usp=sharing`;
 
     // Crear un enlace temporal para forzar la descarga
     const a = document.createElement("a");
     a.href = downloadURL;
-    a.download = "Curriculum.pdf";  // Nombre del archivo al descargarlo
+    a.download = "cv.pdf";  
     a.style.display = "none";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
 });
+
+//Boton de pregunta si deseo descargar archivo 
+document.getElementById("downloadButton").addEventListener("click", function() {
+    // Confirmación antes de la descarga
+    const userConfirmed = confirm("¿Estás seguro de que quieres descargar el archivo?");
+
+    // Solo procede si el usuario confirmó
+    if (userConfirmed) {
+        // URL de descarga directa
+        const downloadURL = `https://drive.google.com/uc?export=download&id=1VuOk_KZViXRiHdgoq_n91Og8u_8p5YL5`; // Cambiado para forzar descarga
+
+        // Crear un enlace temporal para forzar la descarga
+        const a = document.createElement("a");
+        a.href = downloadURL;
+        a.download = "cv.pdf";  // Nombre del archivo al descargarlo
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+});
+
