@@ -55,7 +55,7 @@ document.querySelectorAll('.fa-brands.fa-linkedin-in').forEach(function(button) 
 // Botón de GitHub
 document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
     button.addEventListener("click", function() {
-        window.open("assets/cv.pdf", "_blank");
+        window.open("https://github.com/TonyMoyaCode", "_blank");
     });
 });
 
