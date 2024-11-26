@@ -1,40 +1,31 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 /* Botón de cambio de tema */
+
 .theme-toggle {
     position: fixed; /* Fija el botón a la ventana */
-    bottom: 20px;    /* Distancia desde la parte inferior */
-    right: 20px;     /* Distancia desde el lado derecho */
+    top: 22px;       /* Distancia desde la parte superior (ajusta este valor para centrar el botón en el lugar adecuado) */
+    left: 32%;       /* Centrado horizontal */
     background: var(--button-background, #ffffff);
     color: var(--button-color, #2c2c2c);
     border: none;
     border-radius: 50%; /* Forma circular */
-    display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
     font-size: 24px;
     z-index: 9999; /* Mantiene el botón encima de otros elementos */
 }
-
 .theme-toggle:hover {
     transform: scale(1.1);
 }
-/* Ajustes específicos para dispositivos pequeños */
-@media screen and (max-width: 600px) {
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
     .theme-toggle {
-        bottom: 10px; /* Ajusta la posición inferior */
-        right: 10px;  /* Ajusta la posición derecha */
-        padding: 8px 10px; /* Tamaño más pequeño */
-        font-size: 16px; /* Reduce el tamaño de la fuente */
+        top: 25px;        /* Ajusta la posición del botón a 25px desde la parte superior */
+        left: 48%;        /* Centra el botón */
+        transform: translateX(-50%); /* Asegura que el botón quede centrado */
+        font-size: 20px;  /* Reduce el tamaño del botón */
     }
-}
-/* Tema claro (por defecto) */
-body {
-    background-color: #ffffff; /* Fondo blanco */
-    color: #1CB698; /* Texto oscuro */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave */
 }
 
 /* Tema oscuro */
