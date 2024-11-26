@@ -4,7 +4,7 @@
 .theme-toggle {
     position: fixed; /* Fija el botón a la ventana */
     top: 22px;       /* Distancia desde la parte superior (ajusta este valor para centrar el botón en el lugar adecuado) */
-    left: 32%;       /* Centrado horizontal */
+    left: 38%;       /* Centrado horizontal */
     background: var(--button-background, #ffffff);
     color: var(--button-color, #2c2c2c);
     border: none;
@@ -22,6 +22,7 @@
         left: 75%;        /* Centra el botón */
         transform: translateX(-50%); /* Asegura que el botón quede centrado */
         font-size: 20px;  /* Reduce el tamaño del botón */
+        transform: none;  /* Elimina el efecto de escala en pantallas pequeñas */
     }
 }
 
