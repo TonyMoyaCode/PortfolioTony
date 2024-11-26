@@ -14,9 +14,6 @@
     font-size: 24px;
     z-index: 9999; /* Mantiene el botón encima de otros elementos */
 }
-.theme-toggle:hover {
-    transform: scale(1.1);
-}
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
