@@ -22,7 +22,7 @@
 @media (max-width: 768px) {
     .theme-toggle {
         top: 25px;        /* Ajusta la posición del botón a 25px desde la parte superior */
-        left: 48%;        /* Centra el botón */
+        left: 78%;        /* Centra el botón */
         transform: translateX(-50%); /* Asegura que el botón quede centrado */
         font-size: 20px;  /* Reduce el tamaño del botón */
     }
