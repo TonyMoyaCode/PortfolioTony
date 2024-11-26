@@ -3,18 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQJWGJ8LI2Ud+7KX3KKNqpnf0zYFF/jf9IfFKNF9iOf9tcKqbklcJzHgs" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <!-- Contenido de la columna 1 (se ajusta al 12 de 12 en pantallas pequeñas y al 4 de 12 en pantallas medianas) -->
+            <p>Columna 1</p>
+          </div>
+          <div class="col-md-4 col-12">
+            <!-- Contenido de la columna 2 -->
+            <p>Columna 2</p>
+          </div>
+          <div class="col-md-4 col-12">
+            <!-- Contenido de la columna 3 -->
+            <p>Columna 3</p>
+          </div>
+        </div>
+      </div>
+      <div class="container py-5">
+        <!-- Esto le da un relleno de 5 unidades (spacers) en el eje Y -->
+        <p>Contenido con relleno</p>
+      </div>      
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
             <div class="logo">
                 <a href="#">Antonio Moya</a>
             </div>
+            <button id="themeToggle" class="theme-toggle">
+                <span id="icon">🌞</span>
+            </button>            
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
@@ -35,10 +59,10 @@
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="img/ImAntonio.jpg" alt="">
+                <img src="img/ImAntonio.jpg"alt="">
             </div>
             <h1>Antonio Moya</h1>
-            <h2>Desarrollador JavaScript Jr</h2>
+            <h2>Desarrollador Web</h2>
             <div class="redes">
                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -50,10 +74,9 @@
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Antonio Moya.</span> Nací en Venezuela. Tengo 35 años y soy titulado en Administración Comercial desde el año 2016 por el Instituto Universitario de Gerencia y Tecnología.
-
-                Actualmente, estoy en proceso de transición hacia el área de tecnología y desarrollo web, específicamente con HTML, CSS y JavaScript. El aprendizaje es un proceso constante en mi vida; cada día trae nuevas lecciones.
-                   
+            <p><span>Hola, soy Antonio Moya.</span> 
+                Soy un desarrollador web en transición hacia el área de tecnología, con experiencia en tecnologías como HTML, CSS, JavaScript, Bootstrap y Node.js.
+Tengo 35 años y soy titulado en Administración Comercial desde 2016 por el Instituto Universitario de Gerencia y Tecnología. Actualmente, estoy dedicando mis esfuerzos a fortalecer mis habilidades en desarrollo web. Para mí, el aprendizaje es un proceso constante, y cada día trae nuevas lecciones que me permiten crecer tanto personal como profesionalmente.
                 </p>
 
             <div class="fila">
@@ -65,9 +88,7 @@
                             <strong>Cumpleaños</strong>
                             03/06/1989
                         </li>
-                        <li>
-                        <strong>Teléfono</strong>+56 9 8975 3616
-                        </li>
+                       
                         <li>
                             <strong>Email</strong>
                             tonymoya89@gmail.com
@@ -125,7 +146,7 @@
                 </div>
             </div>
             <button>
-                <a id="downloadCV" href="assets/cv.pdf" download="CV.pdf">
+                <a id="downloadCV" href="assets/CVSF.pdf" download="CV.pdf">
                     Descargar CV <i class="fa fa-download"></i>
                     <span class="overlay"></span>
                 </a>   
@@ -233,14 +254,15 @@
                         <h4>Conocimientos</h4>
                         <span class="casa">Herramientas Multimedia</span>
                         <span class="fecha"></span>
-                        <p>Manejo Avanzado Windows, Manejo de Excel nivel intermedio, y otras herramientas de paquete office.
-
-                            Manejo de Project ambiente 2010. /
-                            
-                            SAP / AutoCAD / 
-                            
-
-                            </p>
+                        <p>
+                            HTML, CSS, Bootstrap, Node.js<br>
+                            Aprendiendo Python<br>
+                            Manejo avanzado de Windows<br>
+                            Manejo de Excel a nivel intermedio y otras herramientas de paquete Office<br>
+                            Manejo de Project en ambiente 2010<br>
+                            SAP<br>
+                            AutoCAD
+                          </p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
@@ -299,11 +321,9 @@
             </div>
         </div>
     </section>
-   </body>
-   </html>
-   
-    <!-- footer -->
-    <footer>
+     <!-- footer -->
+      <section>
+     <footer>
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
@@ -312,6 +332,12 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-github"></i></a>
         </div> 
-    <script src="script.js"></script>
+      </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6jG9e9kMkv3mO6vJeKR4NU1iLKAeRB8wLb6l9BGb/t4xU8Bv1Ws" crossorigin="anonymous"></script>
+    <script src="/public/js/script.js"></script>
+    <script src="path_to_your_script.js"></script>
+
 </body>
 </html>
