@@ -46,9 +46,8 @@ section, header, footer {
     padding: 0;
 }
 html {
-    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Ajusta este valor según la altura de tu encabezado */
 }
-
 /* MENU */
 .contenedor-header {
     background: #ffffff;
@@ -98,6 +97,7 @@ html {
     cursor: pointer;
     display: flex;
 }
+
 /* SECCION I N I C I O */
 @media (min-width: 768px) {  /* Ajusta el ancho mínimo según tu diseño */
     .barra-menu {
@@ -116,14 +116,15 @@ html {
     color: #6c757d;
     display: flex;
     align-items: center;
+    margin-bottom: 0;
 }
-
 .inicio .contenido-banner{
     padding: 80px 40px;
     max-width: 850px;
     margin: auto;
     text-align: center;
 }
+
 /* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     .inicio .contenido-banner {
@@ -186,9 +187,135 @@ html {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
-    padding: 40px;
+    padding: 60px;
 
 }
+/* Tamaño fijo para los logos */
+/* Contenedor general */
+.logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo general para los logos */
+.tech-logo {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transición para animaciones suaves */
+}
+
+/* Colores personalizados con filter */
+.tech-html {
+  filter: invert(30%) sepia(94%) saturate(651%) hue-rotate(349deg) brightness(93%) contrast(87%);
+}
+.tech-css {
+  filter: invert(31%) sepia(60%) saturate(1265%) hue-rotate(178deg) brightness(92%) contrast(90%);
+}
+.tech-js {
+  filter: invert(90%) sepia(68%) saturate(472%) hue-rotate(2deg) brightness(101%) contrast(101%);
+}
+.tech-node {
+  filter: invert(41%) sepia(48%) saturate(340%) hue-rotate(69deg) brightness(92%) contrast(85%);
+}
+.tech-git {
+  filter: invert(42%) sepia(100%) saturate(423%) hue-rotate(354deg) brightness(91%) contrast(87%);
+}
+.tech-github {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+}
+.tech-bootstrap {
+  filter: invert(18%) sepia(45%) saturate(456%) hue-rotate(245deg) brightness(87%) contrast(80%);
+}
+.tech-mysql {
+  filter: invert(35%) sepia(100%) saturate(402%) hue-rotate(168deg) brightness(93%) contrast(95%);
+}
+
+/* Animación al pasar el mouse */
+.tech-logo:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del logo */
+  filter: brightness(1.2); /* Hace que el logo brille un poco más */
+}
+/* Animación base para los logos */
+.tech-logo {
+    width: 50px;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Transiciones suaves */
+  }
+  
+  /* Efecto al pasar el mouse */
+  .tech-logo:hover {
+    transform: rotate(360deg); /* Rotación completa */
+    filter: brightness(1.5) saturate(2); /* Colores más brillantes y saturados */
+  }
+  
+  /* Colores personalizados para cada logo */
+  .tech-html:hover {
+    filter: invert(30%) sepia(94%) saturate(651%) hue-rotate(349deg) brightness(120%) contrast(90%);
+  }
+  
+  .tech-css:hover {
+    filter: invert(31%) sepia(60%) saturate(1265%) hue-rotate(178deg) brightness(120%) contrast(90%);
+  }
+  
+  .tech-js:hover {
+    filter: invert(90%) sepia(68%) saturate(472%) hue-rotate(2deg) brightness(120%) contrast(90%);
+  }
+  
+  .tech-node:hover {
+    filter: invert(41%) sepia(48%) saturate(340%) hue-rotate(69deg) brightness(120%) contrast(90%);
+  }
+  
+  .tech-git:hover {
+    filter: invert(42%) sepia(100%) saturate(423%) hue-rotate(354deg) brightness(120%) contrast(90%);
+  }
+  
+  .tech-github:hover {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(70%) contrast(150%);
+  }
+  
+  .tech-bootstrap:hover {
+    filter: invert(18%) sepia(45%) saturate(456%) hue-rotate(245deg) brightness(120%) contrast(90%);
+  }
+  
+  .tech-mysql:hover {
+    filter: invert(35%) sepia(100%) saturate(402%) hue-rotate(168deg) brightness(120%) contrast(95%);
+  }
+/* Animación base */
+.tech-logo {
+    width: 50px;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Transiciones suaves */
+  }
+  
+  /* Efecto en dispositivos táctiles y escritorio */
+  .tech-logo:hover, .tech-logo:active {
+    transform: rotate(360deg); /* Rotación completa */
+    filter: brightness(1.5) saturate(2); /* Colores más brillantes y saturados */
+  }
+  
+  /* Colores personalizados al interactuar */
+  .tech-html:active {
+    filter: invert(30%) sepia(94%) saturate(651%) hue-rotate(349deg) brightness(120%) contrast(90%);
+  }
+  .tech-css:active {
+    filter: invert(31%) sepia(60%) saturate(1265%) hue-rotate(178deg) brightness(120%) contrast(90%);
+  }
+  .tech-js:active {
+    filter: invert(90%) sepia(68%) saturate(472%) hue-rotate(2deg) brightness(120%) contrast(90%);
+  }
+  .tech-node:active {
+    filter: invert(41%) sepia(48%) saturate(340%) hue-rotate(69deg) brightness(120%) contrast(90%);
+  }
+/* Efecto al tocar (en móviles) */
+.touched {
+    transform: rotate(360deg); /* Rotación completa */
+    filter: brightness(1.5) saturate(2); /* Colores vibrantes */
+    transition: transform 0.5s ease, filter 0.5s ease; /* Transiciones suaves */
+  }
+      
 .sobremi .contenido-seccion p{
     font-size: 18px;
     line-height: 22px;
@@ -287,155 +414,156 @@ html {
     width: 100%;
 }
 /* SECCION S K I L L S */
-.skills{
-    background-color: #1CB698;
-    color: #fff;
-    padding: 50px 20px;
+/* Sección de Skills */
+/* Establecer las barras para que comiencen en 0% */
+/* Sección de Skills */
+/* Sección de Skills */
+/* Sección de Skills */
+.skills {
+    background-color: #1CB698; /* Fondo de la sección */
+    color: #fff; /* Texto en blanco */
+    padding: 70px 20px; /* Ajusta el padding para mayor espacio */
+    margin-top: 50px; /* Separación de la sección anterior */
 }
-.skills .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.skills h2{
-    font-size: 48px;
-    font-family: 'Righteous';
+
+/* Título de la sección */
+.skills h2 {
+    font-size: 48px; /* Tamaño grande para el título */
+    font-family: 'Righteous', sans-serif;
     text-align: center;
     padding: 20px 0;
+}
 
-}
-.skills .fila{
+/* Contenedor de las barras de habilidad */
+.skills .fila {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espaciado entre columnas */
+    gap: 20px; /* Espaciado entre las barras */
 }
-.skills .fila .col{
-    width: 50%;
+
+/* Ajuste de las columnas en pantallas más pequeñas */
+.skills .fila .col {
+    width: 48%; /* Ajusta el tamaño de las columnas */
     padding: 0 20px;
 }
-.skills .fila .col h3{
-    font-size: 26px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
+
+/* Estilo de cada barra de habilidad */
+.skills .skill {
+    margin-bottom: 30px; /* Espaciado entre barras */
 }
-.skills .skill > span{
+
+/* Estilo del texto del nombre de cada habilidad */
+.skills .skill > span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
+    font-size: 20px; /* Ajusta el tamaño del texto */
 }
-.skills .skill .barra-skill{
-    height: 8px;
-    width: 80%;
-    background-color: #131517;
+
+/* Estilo de la barra de progreso */
+.skills .barra-skill {
+    height: 15px; /* Altura de las barras */
+    width: 100%;
+    background-color: #131517; /* Color de fondo de la barra */
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordes redondeados en el fondo de la barra */
 }
-.skills .skill .progreso{
-    background-color: #dcfcf5;
+
+/* Barra de progreso (efecto de animación) */
+.skills .progreso {
+    background-color: #dcfcf5; /* Color del progreso */
     position: absolute;
     top: 0;
     left: 0;
-    height: 8px;
+    height: 100%; /* Para que ocupe todo el alto de la barra */
+    width: 0%; /* El ancho de la barra será animado */
+    border-radius: 10px; /* Bordes redondeados en la barra de progreso */
+    transition: width 2s ease-out; /* Transición suave */
 }
-.skills .skill .barra-skill span{
+
+/* Animación para que las barras se llenen */
+@keyframes barraHabilidad {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Especificamos el porcentaje de cada habilidad */
+.skills .skill .javascript .progreso {
+    width: 75%; /* Porcentaje de habilidad en JavaScript */
+}
+
+.skills .skill .htmlcss .progreso {
+    width: 89%; /* Porcentaje de habilidad en HTML & CSS */
+}
+
+.skills .skill .SQL .progreso {
+    width: 95%; /* Porcentaje de habilidad en SQL */
+}
+
+.skills .skill .wordpress .progreso {
+    width: 81%; /* Porcentaje de habilidad en WordPress */
+}
+
+.skills .skill .drupal .progreso {
+    width: 55%; /* Porcentaje de habilidad en Drupal */
+}
+
+.skills .skill .comunicacion .progreso {
+    width: 80%; /* Porcentaje de habilidad en Comunicación */
+}
+
+.skills .skill .trabajo .progreso {
+    width: 70%; /* Porcentaje de habilidad en Trabajo en equipo */
+}
+
+.skills .skill .creatividad .progreso {
+    width: 99%; /* Porcentaje de habilidad en Creatividad */
+}
+
+.skills .skill .dedicacion .progreso {
+    width: 65%; /* Porcentaje de habilidad en Dedicación */
+}
+
+.skills .skill .proyect .progreso {
+    width: 94%; /* Porcentaje de habilidad en Proyectos */
+}
+
+/* Estilo para el porcentaje dentro de las barras */
+.skills .barra-skill span {
     position: absolute;
     height: 40px;
     width: 40px;
     background-color: #1CB698;
-    border-radius: 50px;
+    border-radius: 50%;
     line-height: 40px;
     text-align: center;
     top: -17px;
     right: -15px;
     font-size: 14px;
 }
-/* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 75%;}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .skills .fila .col {
+        width: 100%; /* Las columnas ocuparán todo el ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+    
+    .skills h2 {
+        font-size: 36px; /* Ajustar tamaño del título */
+    }
+
+    .skills .skill .barra-skill {
+        height: 10px; /* Ajustar el tamaño de las barras en pantallas pequeñas */
+    }
+
+    .skills .barra-skill span {
+        font-size: 12px; /* Ajustar tamaño del texto del porcentaje en pantallas pequeñas */
+    }
 }
 
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .photoshop{
-    width: 0%;
-    animation: 2s photoshop forwards;
-}
-@keyframes photoshop {
-    0%{width: 0%;}
-    100%{width: 95%;}
-}
-
-.skills .skill .wordpress{
-    width: 0%;
-    animation: 2s wordpress forwards;
-}
-@keyframes wordpress {
-    0%{width: 0%;}
-    100%{width: 81%;}
-}
-
-.skills .skill .drupal{
-    width: 0%;
-    animation: 2s drupal forwards;
-}
-@keyframes drupal {
-    0%{width: 0%;}
-    100%{width: 55%;}
-}
-
-.skills .skill .comunicacion{
-    width: 0%;
-    animation: 2s comunicacion forwards;
-}
-@keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-.skills .skill .trabajo{
-    width: 0%;
-    animation: 2s trabajo forwards;
-}
-@keyframes trabajo {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .creatividad{
-    width: 0%;
-    animation: 2s creatividad forwards;
-}
-@keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 99%;}
-}
-
-.skills .skill .dedicacion{
-    width: 0%;
-    animation: 2s dedicacion forwards;
-}
-@keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 65%;}
-}
-
-.skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
-}
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 94%;}
-}
 /* SECCION CURRICULUM */
 .curriculum{
     color: #1cb698;
@@ -714,7 +842,7 @@ footer .arriba{
     width: 50px;
     height: 50px;
     background-color: #1CB698;
-    color: #1CBf;
+    color: rgb(255, 255, 255);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

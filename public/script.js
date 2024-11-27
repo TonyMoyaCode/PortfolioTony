@@ -17,30 +17,61 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
+// Función para ocultar o mostrar el menú en base al desplazamiento
+let prevScrollpos = window.pageYOffset; // Guarda la posición anterior del scroll
 
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset; // Obtén la posición actual del scroll
+    const nav = document.getElementById("nav");
+
+    // Si el scroll es hacia abajo, oculta el menú
+    if (prevScrollpos > currentScrollPos) {
+        nav.classList.add("responsive");
+    } else {
+        nav.classList.remove("responsive");
+    }
+
+    // Actualiza la posición anterior
+    prevScrollpos = currentScrollPos;
+};
+
+
+// barras skill movimientos 
+// Detectar el evento de scroll para aplicar la animación a las barras de habilidad
+window.onscroll = function() {
+    efectoHabilidades();
+};
+
+// Función que activa la animación de las barras de habilidad cuando la sección es visible
+function efectoHabilidades() {
+    // Obtener la sección de habilidades
+    const skillsSection = document.getElementById("skills");
+    const barrasSkill = document.querySelectorAll(".barra-skill");
+
+    // Determinar si la sección es visible en el viewport
+    const sectionTop = skillsSection.getBoundingClientRect().top;
+    const sectionBottom = skillsSection.getBoundingClientRect().bottom;
+    const isInViewport = sectionTop < window.innerHeight && sectionBottom >= 0;
+
+    // Si la sección está visible, activamos la animación de las barras
+    if (isInViewport) {
+        barrasSkill.forEach(function(barra) {
+            const progreso = barra.querySelector(".progreso");
+            const porcentaje = parseInt(progreso.querySelector("span").innerText);
+
+            // Establecer la animación para las barras de habilidad
+            // Inicia desde 0% y va incrementando hasta el porcentaje indicado
+            progreso.style.transition = 'width 3s ease-out'; // Transición más suave
+            progreso.style.width = porcentaje + '%'; // Ajusta el progreso según el porcentaje
+        });
     }
 }
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
+// También se puede activar la animación de las barras al cargar la página
+document.addEventListener("DOMContentLoaded", function() {
     efectoHabilidades();
-} 
+});
+
 // Botón de Instagram
 document.querySelectorAll('.fa-brands.fa-instagram').forEach(function(button) {
     button.addEventListener("click", function() {
@@ -148,4 +179,46 @@ document.getElementById('themeToggle').addEventListener('click', function() {
         icon.classList.remove('bi-sun-fill');
         icon.classList.add('bi-moon-stars-fill');
     }
+});
+ // ANIMACIONES LOGO 
+// Espera a que el contenido del documento esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    gsap.from(".tech-logo", {
+      duration: 1.5, // Duración de la animación
+      opacity: 0,    // Comienza transparente
+      scale: 0.5,    // Comienza pequeño
+      stagger: 0.3   // Intervalo de tiempo entre las animaciones
+    });
+  });
+  
+  let logo = document.querySelector('.tech-logo');
+if (logo) {
+  logo.classList.add('animado');
+} else {
+  console.log('Logo no encontrado');
+}
+// efecto logos 360 
+const logos = document.querySelectorAll('.tech-logo');
+
+logos.forEach((logo) => {
+  logo.addEventListener('touchstart', () => {
+    // Agregar clase con la animación personalizada
+    logo.classList.add('touched');
+    
+    // Eliminar la clase después de la animación para que pueda repetirse
+    setTimeout(() => {
+      logo.classList.remove('touched');
+    }, 500); // Tiempo que dura la animación
+  });
+});
+// ajusta el valor negativo del encabezado 
+document.querySelector("#boton-sobre-mi").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector("#sobre-mi").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+    });
+
+    window.scrollBy(0, -60); // Ajusta el valor negativo según el tamaño de tu encabezado
 });
