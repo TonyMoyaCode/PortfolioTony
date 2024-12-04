@@ -1,6 +1,5 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 /* Botón de cambio de tema */
-
 .theme-toggle {
     position: fixed; /* Fija el botón a la ventana */
     top: 22px;       /* Distancia desde la parte superior (ajusta este valor para centrar el botón en el lugar adecuado) */
@@ -46,7 +45,7 @@ section, header, footer {
     padding: 0;
 }
 html {
-    scroll-padding-top: 80px; /* Ajusta este valor según la altura de tu encabezado */
+    scroll-padding-top: 60px; /* Ajusta este valor según la altura de tu encabezado */
 }
 /* MENU */
 .contenedor-header {
@@ -99,24 +98,12 @@ html {
 }
 
 /* SECCION I N I C I O */
-@media (min-width: 768px) {  /* Ajusta el ancho mínimo según tu diseño */
-    .barra-menu {
-      display: none;
-    }
-  }
-  @media (max-width: 767px) {
-    .barra-menu {
-      display: block;
-    }
-  }
   .inicio {
+    padding: 25px;
     background: url('Im Antonio .jpg');
     background-size: cover;
-    min-height: 100vh;
     color: #6c757d;
     display: flex;
-    align-items: center;
-    margin-bottom: 0;
 }
 .inicio .contenido-banner{
     padding: 80px 40px;
@@ -125,6 +112,37 @@ html {
     text-align: center;
 }
 
+/* Media Queries para Responsividad */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .inicio {
+        padding: 20px;
+        background-size: contain; /* Ajusta el fondo */
+    }
+
+    .inicio .contenido-banner {
+        padding: 50px 20px; /* Reduce el padding interno */
+        max-width: 90%; /* Ajusta el ancho del contenido */
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .inicio {
+        margin-top: 50px;
+        padding: 10px;
+        background-size: 250% 220%; /* Amplía la imagen al 120% de su tamaño original */
+        background-position: center; /* Centra la imagen */
+        flex-direction: column;
+    }
+
+
+    .inicio .contenido-banner {
+        padding: 30px 15px; /* Menos espacio interno */
+        font-size: 14px; /* Texto más pequeño */
+    }
+}
 /* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
     .inicio .contenido-banner {
@@ -315,7 +333,6 @@ html {
     filter: brightness(1.5) saturate(2); /* Colores vibrantes */
     transition: transform 0.5s ease, filter 0.5s ease; /* Transiciones suaves */
   }
-      
 .sobremi .contenido-seccion p{
     font-size: 18px;
     line-height: 22px;
@@ -334,7 +351,7 @@ html {
     width: 50%;
 }
 .sobremi .fila .col h3{
-    font-size: 28px;
+    font-size: 30px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
@@ -414,11 +431,7 @@ html {
     width: 100%;
 }
 /* SECCION S K I L L S */
-/* Sección de Skills */
-/* Establecer las barras para que comiencen en 0% */
-/* Sección de Skills */
-/* Sección de Skills */
-/* Sección de Skills */
+
 .skills {
     background-color: #1CB698; /* Fondo de la sección */
     color: #fff; /* Texto en blanco */
@@ -565,116 +578,162 @@ html {
 }
 
 /* SECCION CURRICULUM */
-.curriculum{
+
+.curriculum {
     color: #1cb698;
     padding: 50px 20px;
+    font-family: 'Righteous', sans-serif; /* Fuente uniforme */
 }
-.curriculum .contenido-seccion{
+
+.curriculum .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.curriculum h2{
-    font-size: 48px;
-    font-family: 'Righteous';
+
+.curriculum h2 {
+    font-size: 54px; /* Títulos principales grandes */
     text-align: center;
     padding: 20px 0;
-
+    line-height: 1.2;
 }
-.curriculum .fila{
+
+.curriculum .fila {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Ajuste dinámico en pantallas pequeñas */
+    gap: 20px; /* Espaciado uniforme entre columnas */
 }
-.curriculum .fila .col{
-    width: 49%;
-    padding: 0 20px;
+
+.curriculum .fila .col {
+    width: calc(50% - 20px); /* Tamaño igual para cada columna */
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border */
 }
-.curriculum .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
+
+.curriculum .fila .col h3 {
+    font-size: 32px; /* Subtítulos grandes */
     margin-bottom: 25px;
+    line-height: 1.3;
 }
-.curriculum .fila .izquierda{
+
+.curriculum .fila .izquierda {
     border-right: 2px solid #252A2E;
+    padding-right: 20px;
 }
-.curriculum .fila .derecha{
+
+.curriculum .fila .derecha {
     border-left: 2px solid #252A2E;
+    padding-left: 20px;
 }
-.curriculum .fila .item{
+
+.curriculum .fila .item {
     padding: 25px;
     margin-bottom: 30px;
     background-color: #252A2E;
     position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
 }
-.curriculum .fila .item h4{
-    font-size: 20px;
+
+.curriculum .fila .item h4 {
+    font-size: 24px;
     margin-bottom: 10px;
+    color: #1cb698;
 }
-.curriculum .fila .item .casa{
-    color: #1CB698;
+
+.curriculum .fila .item .casa {
+    color: #1cb698;
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
-.curriculum .fila .item .fecha{
+
+.curriculum .fila .item .fecha {
     display: block;
-    color: #1CB698;
+    color: #1cb698;
+    font-size: 18px;
     margin-bottom: 10px;
 }
-.curriculum .fila .item p{
-    line-height: 24px;
+
+.curriculum .fila .item p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
 }
-.curriculum .fila .izq{
-    border-right: 2px solid #1CB698;
-    margin-right: 20px;
-}
-.curriculum .fila .der{
-    border-left: 2px solid #1CB698;
-    margin-left: 20px;
-}
-.curriculum .fila .item .conectori{
+
+.curriculum .fila .item .conectori,
+.curriculum .fila .item .conectord {
     height: 2px;
-    background-color: #1CB698;
+    background-color: #1cb698;
     width: 47px;
     position: absolute;
     top: 50%;
+    z-index: 5;
+}
+
+.curriculum .fila .item .conectori {
     right: -47px;
-    z-index: 5;
 }
-.curriculum .fila .item .conectori .circuloi{
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #1CB698;
-    float: right;
-    position: relative;
-    bottom: 4px;
-}
-.curriculum .fila .item .conectord{
-    height: 2px;
-    background-color: #1CB698;
-    width: 47px;
-    position: absolute;
-    top: 50%;
+
+.curriculum .fila .item .conectord {
     left: -47px;
-    z-index: 5;
 }
-.curriculum .fila .item .conectord .circulod{
+
+.curriculum .fila .item .conectori .circuloi,
+.curriculum .fila .item .conectord .circulod {
     display: block;
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #1CB698;
-    float: left;
+    background-color: #1cb698;
     position: relative;
     bottom: 4px;
 }
-/* SECCION PORTFOLIO */
-.portfolio{
-    color:   #1CB698;
-    padding: 50px 20px;
+
+.curriculum .fila .item .conectori .circuloi {
+    float: right;
 }
-.portfolio .contenido-seccion{
+
+.curriculum .fila .item .conectord .circulod {
+    float: left;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .curriculum h2 {
+        font-size: 40px; /* Títulos principales más pequeños */
+    }
+
+    .curriculum .fila {
+        gap: 15px; /* Espaciado reducido */
+    }
+
+    .curriculum .fila .col {
+        width: 100%; /* Una columna por fila */
+        padding: 0;
+    }
+
+    .curriculum .fila .item {
+        padding: 20px;
+    }
+
+    .curriculum .fila .item h4 {
+        font-size: 22px;
+    }
+
+    .curriculum .fila .item p {
+        font-size: 16px;
+    }
+}
+
+/* SECCION PORTFOLIO */
+.portfolio {
+    color: #1CB698;
+    padding: 50px 20px;
+    text-align: center; /* Centra el contenido dentro de la sección */
+}
+
+.portfolio .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
@@ -683,50 +742,149 @@ html {
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+
 }
-.portfolio .galeria{
+/* General */
+.galeria {
+    max-width: 100%; /* Ajusta el ancho de las imágenes al contenedor */
+    height: auto; /* Mantiene la proporción */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px; /* Espaciado horizontal entre las tarjetas */
+    margin: 40px 0;
+    padding-top: 5px;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en filas */
 }
-.portfolio .galeria .proyecto{
+
+/* Espaciado adicional entre las tarjetas */
+.galeria .tarjeta {
+    margin-bottom: 60px; /* Aumenta el espacio vertical entre las tarjetas */
+    width: 100%; /* Hace que las tarjetas ocupen todo el ancho disponible */
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 768px) {
+    .galeria img {
+        width: 60%; /* Tamaño de las imágenes al 60% del contenedor */
+        height: auto; /* Mantiene la proporción */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .galeria .tarjeta {
+        margin-bottom: 80px; /* Espaciado mayor en pantallas pequeñas */
+    }
+
+    .galeria {
+        gap: 20px; /* Reduce el espaciado horizontal para pantallas pequeñas */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .galeria .tarjeta {
+        margin-bottom: 80px; /* Aumenta el espaciado vertical */
+    }
+
+    .galeria img {
+        width: 90%; /* Asegura que las imágenes sean más pequeñas */
+        margin: 0 auto; /* Centra las imágenes */
+    }
+}
+
+.proyecto {
+    margin-bottom: 10%;
     position: relative;
-    max-width: 340px;
-    height: fit-content;
-    margin: 10px;
-    cursor: pointer;
+    width: 300px; /* Ancho estándar para todas las tarjetas */
+    height: 200px; /* Alto estándar para todas las tarjetas */
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease;
 }
-.portfolio .galeria .proyecto img{
-    width: 100%;
-    display: block;
+
+.proyecto:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta al pasar el cursor */
 }
-.portfolio .galeria .proyecto .overlay{
-    position: absolute;
-    top: 0;
+
+.proyecto img {
     width: 100%;
     height: 100%;
-    text-align: center;
-    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover img {
+    transform: scale(1.1); /* Zoom suave al pasar el cursor */
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 1s;
-    font-size: 18px;
-    letter-spacing: 3px;
+    align-items: center;
+    text-align: center;
+    color: #fff;
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
-.portfolio .galeria .proyecto .overlay h3{
-    margin-bottom: 20px;
-    transition: 1s;
-    color: white;
-}
-.portfolio .galeria .proyecto .overlay:hover{
+
+.proyecto:hover .overlay {
     opacity: 1;
-    color: white;
 }
-.portfolio .galeria .proyecto .overlay:hover h3{
-    margin-bottom: 0px;
+
+.overlay h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
+
+.overlay p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Botones */
+.btn-demo,
+.btn-github {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-demo {
+    background-color:  #1CB698d5; /* Azul claro */
+    color: #fff;
+}
+
+.btn-demo:hover {
+    background-color: #00b318;
+    transform: translateY(-2px); /* Efecto de presión */
+}
+
+.btn-github {
+    background-color:  #1CB698; /* Negro clásico */
+    color: #fff;
+}
+
+.btn-github:hover {
+    background-color: #00b318;
+    transform: translateY(-2px);
+}
+
 /* SECCION CONTACTO */
 .contacto{
     background-image: url(img/contact_bg.png);

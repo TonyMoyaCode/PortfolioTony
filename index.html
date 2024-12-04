@@ -9,27 +9,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="public/styles.css">
 </head>
-<body>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-12">
-            <!-- Contenido de la columna 1 (se ajusta al 12 de 12 en pantallas pequeñas y al 4 de 12 en pantallas medianas) -->
-            <p>Columna 1</p>
-          </div>
-          <div class="col-md-4 col-12">
-            <!-- Contenido de la columna 2 -->
-            <p>Columna 2</p>
-          </div>
-          <div class="col-md-4 col-12">
-            <!-- Contenido de la columna 3 -->
-            <p>Columna 3</p>
-          </div>
-        </div>
-      </div>
-      <div class="container py-5">
-        <!-- Esto le da un relleno de 5 unidades (spacers) en el eje Y -->
-        <p>Contenido con relleno</p>
-      </div>       
+<body>     
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
@@ -43,9 +23,9 @@
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
                     <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
                 </ul>          
         </nav>
             </nav>
@@ -53,9 +33,7 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
-    </div>
-
-    <!-- SECCION INICIO -->
+    </div> <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
@@ -68,17 +46,14 @@
                 <a href="#"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
-    </section>
-
-    <!-- SECCION SOBRE MI -->
+    </section><!-- SECCION SOBRE MI -->
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
-            <p><span>Desarrollador web</span> 
-                 autodidacta con experiencia en HTML, CSS, JavaScript, Bootstrap y Node.js. Con una formación en Administración Comercial, cuento con una base sólida en gestión que complementa mis habilidades técnicas. Actualmente, estoy aprendiendo tecnologías como Python. Mi enfoque está en el aprendizaje continuo, buscando siempre mejorar y expandir mis conocimientos de manera constante y adaptativa.
+                <p><span>Desarrollador web</span> 
+                autodidacta con experiencia en HTML, CSS, JavaScript, Bootstrap y Node.js. Con formación en Administración Comercial, poseo habilidades en planificación, organización y gestión de proyectos, que complementan mi enfoque técnico. Me mantengo en constante práctica y ampliación de mis habilidades, explorando nuevas tecnologías como Python y React, con un firme compromiso por mejorar y adaptarme a nuevos desafíos.
                 </p>
-
-            <div class="fila">
+                <div class="fila">
                 <!-- datos personales -->
                 <div class="col">
                     <h3>Datos Personales</h3>
@@ -128,17 +103,45 @@
                 </a>   
             </button>                  
         </div>
-    </section>
-    
-    
+        </section>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- SECCION CURRICULUM -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>Portfolio</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="img/CARRITO.png" alt="Imagen del proyecto">
+                    <div class="overlay">
+                        <h3>Carrito de Compras</h3>
+                        <p>Descubre este proyecto en GitHub.</p>
+                        <a href="https://tonymoyacode.github.io/CARRITO_COMPRAS/" target="_blank" class="btn-demo">Ver Demo</a>
+                        <a href="https://github.com/TonyMoyaCode/CARRITO_COMPRAS.git" target="_blank" class="btn-github">Ver en GitHub</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/Entropy.png" alt="Imagen del proyecto">
+                    <div class="overlay">
+                        <h3>Obra Musical</h3>
+                        <p>Descubre este proyecto en GitHub</p>
+                        <a href="https://tonymoyacode.github.io/G-BLUES/" target="_blank" class="btn-demo">Ver Demo</a>
+                        <a href="https://github.com/TonyMoyaCode/G-BLUES" target="_blank" class="btn-github">Ver en GitHub</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/webconstruccion.jpg" alt="Web en construcción">
+                    <div class="overlay">
+                        <h3>Pronto descubrirás nuevas actualizaciones aquí.</h3>
+                        <p>Innovando y potenciando la creatividad. ¡Mantente conectado!</p>
+                    </div>
+                </div>
+            </div>                  
+        </div>
+ <!-- SECCION CURRICULUM -->
     <section id="curriculum" class="curriculum">
         <div class="contenido-seccion">
             <h2>Curriculum</h2>
@@ -208,22 +211,6 @@
             </div>
         </div>
     </section>
-
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
-        <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
-            <div class="galeria">
-                <div class="proyecto">
-                    <img src="img/webconstruccion.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Pronto descubrirás nuevas actualizaciones aquí.</h3>
-                        <p> Innovando y potenciando la creatividad. ¡Mantente conectado!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
     <section class="skills" id="skills">
         <div class="contenido-seccion">
             <h2>Skills</h2>
@@ -326,7 +313,6 @@
         </a>
         <div class="redes">
             <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-github"></i></a>
         </div> 
       </section>
@@ -334,8 +320,7 @@
       <script src="./public/script.js" defer></script>
       <script src="./path_to_your_script.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>  
 </body>
 </html>
 <script src="script.js"></script>
