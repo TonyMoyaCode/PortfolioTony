@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQJWGJ8LI2Ud+7KX3KKNqpnf0zYFF/jf9IfFKNF9iOf9tcKqbklcJzHgs" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="public/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>     
     <!-- MENU ENCABEZADO -->
@@ -17,7 +17,7 @@
                 <a href="#">Antonio Moya</a>
             </div>
             <button id="themeToggle" class="theme-toggle">
-                <span id="icon">🌞</span>
+                <span id="icon"></span>
             </button>            
             <nav id="nav">
                 <ul>
@@ -51,7 +51,7 @@
         <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
                 <p><span>Desarrollador web</span> 
-                autodidacta con experiencia en HTML, CSS, JavaScript, Bootstrap y Node.js. Con formación en Administración Comercial, poseo habilidades en planificación, organización y gestión de proyectos, que complementan mi enfoque técnico. Me mantengo en constante práctica y ampliación de mis habilidades, explorando nuevas tecnologías como Python y React, con un firme compromiso por mejorar y adaptarme a nuevos desafíos.
+               experiencia en HTML, CSS, JavaScript, Bootstrap y Node.js. Con formación en Administración Comercial, poseo habilidades en planificación, organización y gestión de proyectos, que complementan mi enfoque técnico. Me mantengo en constante práctica y ampliación de mis habilidades, explorando nuevas tecnologías como Python y React, con un firme compromiso por mejorar y adaptarme a nuevos desafíos.
                 </p>
                 <div class="fila">
                 <!-- datos personales -->
@@ -74,7 +74,7 @@
                         </li>
                         <li>
                             <strong>Cargo</strong>
-                            <span>FREELANCE</span>
+                            <span>Desarrollador WEB</span>
                         </li>
                     </ul>
                 </div>
@@ -97,7 +97,7 @@
                 </div>
             </div>
             <button>
-                <a id="downloadCV" href="assets/CVSF.pdf" download="CV.pdf">
+                <a id="downloadCV" href="public/assets/CVSF.pdf" download="CV.pdf">
                     Descargar CV <i class="fa fa-download"></i>
                     <span class="overlay"></span>
                 </a>   
@@ -305,8 +305,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>     
     </section>
+    <div class="contact-container">
+        <h2>Contáctame</h2>
+        <form action="https://formspree.io/f/xbllwelq" method="POST">
+            <input name="name" type="text" placeholder="Nombre">
+            <input name="email" type="email" placeholder="Correo">
+            <textarea name="message" placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+      </div>
      <footer>
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
@@ -316,11 +325,11 @@
             <a href="#"><i class="fa-brands fa-github"></i></a>
         </div> 
       </section>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6jG9e9kMkv3mO6vJeKR4NU1iLKAeRB8wLb6l9BGb/t4xU8Bv1Ws" crossorigin="anonymous" defer></script>
-      <script src="./public/script.js" defer></script>
-      <script src="./path_to_your_script.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    <script src="./public/script.js" defer></script>
+    <script src="./path_to_your_script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>  
+    <script src="js/script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>

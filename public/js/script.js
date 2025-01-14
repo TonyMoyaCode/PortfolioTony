@@ -1,6 +1,4 @@
 
-console.log('¡script.js está cargado!');
-
 let menuVisible = false;
 //Función que oculta o muestra el menu
 function mostrarOcultarMenu(){
@@ -222,3 +220,41 @@ document.querySelector("#boton-sobre-mi").addEventListener("click", function(e) 
 
     window.scrollBy(0, -60); // Ajusta el valor negativo según el tamaño de tu encabezado
 });
+// para el contacto : 
+
+// Seleccionar el formulario y manejar el evento de envío
+document.querySelector('#contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();  // Evitar el comportamiento por defecto (recargar la página)
+  
+    const data = {
+      name: document.querySelector('#name').value,
+      email: document.querySelector('#email').value,
+      message: document.querySelector('#message').value,
+    };
+  
+    console.log('Datos enviados:', data); // Verifica que los datos se capturan correctamente
+  
+    try {
+      // Enviar datos al backend
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await response.text();
+      console.log('Respuesta del servidor:', result);
+  
+      if (response.ok) {
+        alert('Correo enviado con éxito');
+      } else {
+        alert('Error al enviar el correo: ' + result);
+      }
+    } catch (error) {
+      console.error('Error en la solicitud:', error);
+      alert('Ocurrió un problema al enviar el correo.');
+    }
+  });
+  

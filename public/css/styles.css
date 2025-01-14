@@ -413,8 +413,8 @@ html {
 }
 
 /* Opcional: Estilo adicional para hover */
-#downloadCV:hover {
-    color: #59eece; /* Cambia el color al pasar el mouse, puedes ajustarlo a tu gusto */
+#downloadCV:hover .overlay {
+    background-color: #59eece; /* Cambia el color de fondo de la barra */
 }
 
 .sobremi button .overlay{
@@ -1078,3 +1078,107 @@ footer .arriba{
         width: 100%;
     }
 }
+/* Contato */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .contact-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-container label {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .contact-container input,
+  .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .contact-container button {
+    padding: 10px 20px;
+    background-color: #00b318;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .contact-container button:hover {
+    background-color: #1CB;
+  }
+  
+  /* Estilos Responsivos */
+  @media screen and (max-width: 768px) {
+    .contact-container {
+      max-width: 90%; /* Reduce el tamaño en pantallas más pequeñas */
+      padding: 15px;
+    }
+  
+    .contact-container h2 {
+      font-size: 20px; /* Ajusta el tamaño del título */
+    }
+  
+    .contact-container label {
+      font-size: 14px; /* Ajusta el tamaño de los textos */
+    }
+  
+    .contact-container input,
+    .contact-container textarea {
+      font-size: 12px; /* Ajusta el tamaño de los campos de texto */
+      padding: 8px; /* Reduce el padding para más espacio */
+    }
+  
+    .contact-container button {
+      font-size: 14px; /* Reduce el tamaño del botón */
+      padding: 8px 16px; /* Ajusta el tamaño del botón */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .contact-container {
+      max-width: 95%; /* Asegura que ocupe casi toda la pantalla en móviles */
+      padding: 10px;
+    }
+  
+    .contact-container h2 {
+      font-size: 18px; /* Ajusta aún más el tamaño en dispositivos muy pequeños */
+    }
+  
+    .contact-container label {
+      font-size: 13px;
+    }
+  
+    .contact-container input,
+    .contact-container textarea {
+      font-size: 12px;
+      padding: 6px;
+    }
+  
+    .contact-container button {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+  
