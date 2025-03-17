@@ -2,8 +2,8 @@
 /* Botón de cambio de tema */
 .theme-toggle {
     position: fixed; /* Fija el botón a la ventana */
-    top: 22px;       /* Distancia desde la parte superior (ajusta este valor para centrar el botón en el lugar adecuado) */
-    left: 38%;       /* Centrado horizontal */
+    top: 20px;       /* Distancia desde la parte superior (ajusta este valor para centrar el botón en el lugar adecuado) */
+    left: 18%;       /* Centrado horizontal */
     background: var(--button-background, #ffffff);
     color: var(--button-color, #2c2c2c);
     border: none;
