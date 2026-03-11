@@ -94,12 +94,12 @@ document.querySelectorAll('.fa-brands.fa-github').forEach(function(button) {
  // Boton que descarga El CV 
 
  document.getElementById("downloadCV").addEventListener("click", function() {
-    const pdfURL = "public/assets/ANTONIO MOYA.pdf"; 
+    const pdfURL = "public/assets/ANTONIO-MOYACV.pdf"; 
     window.open(pdfURL, "_blank"); // Esto abrirá el PDF en una nueva pestaña
 });
 
 document.getElementById("downloadCV").addEventListener("click", function() {
-    const pdfURL = "public/assets/ANTONIO MOYA.pdf"; 
+    const pdfURL = "public/assets/ANTONIO-MOYACV.pdf"; 
 
     // Preguntar al usuario si desea descargar el archivo
     if (confirm("¿Deseas descargar el archivo CV.pdf?")) {
